@@ -53,16 +53,26 @@ export class Confirm extends Component {
             <br />
 
             <Button
+            
+            style={{width: 150,height : 50 , margin : 10 ,background: 'linear-gradient(to right bottom, ##bdc3c7, ##95a5a6)'}} 
               color="secondary"
               variant="contained"
               onClick={this.back}
             >Back</Button>
-
+            <br></br>
             <Button
+             style={{width: 150,height : 50 , margin : 10 ,background: 'linear-gradient(to right bottom, #430089, #82ffa1)'}} 
               color="primary"
               variant="contained"
               onClick={this.continue}
-            >Confirm & Continue</Button>
+            >Confirm </Button>
+
+            <Button 
+             style={{width: 150, height: 50 , margin : 10, background: 'linear-gradient(to right bottom, #430089, #82ffa1)'}} 
+              color="primary"
+              variant="contained"
+              onClick={this.continue}
+            >  Continue</Button>
           </Dialog>
         </>
       </MuiThemeProvider>

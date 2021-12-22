@@ -3,8 +3,12 @@ import FormUserDetails from './FormUserDetails';
 import FormPersonalDetails from './FormPersonalDetails';
 import Confirm from './Confirm';
 import Success from './Success';
+import { FormControl } from '@material-ui/core';
+import Dropdown from 'react-mui-multiselect-dropdown';
 
 export class UserForm extends Component {
+
+ 
   state = {
     step: 1,
     firstName: '',
@@ -59,7 +63,15 @@ export class UserForm extends Component {
             values={values}
           />
         );
-      case 3:
+        case 3:
+          return <Dropdown
+
+          nextStep={this.nextStep}
+          prevStep={this.prevStep}
+          values={values}
+          />;
+
+      case 4:
         return (
           <Confirm
             nextStep={this.nextStep}
@@ -67,6 +79,8 @@ export class UserForm extends Component {
             values={values}
           />
         );
+       
+
       case 4:
         return <Success />;
       default:

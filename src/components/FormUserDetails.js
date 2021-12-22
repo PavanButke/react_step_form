@@ -3,16 +3,26 @@ import Dialog from '@material-ui/core/Dialog';
 import AppBar from '@material-ui/core/AppBar';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
+import Button from '@material-ui/core/Button'
+
+
 
 export class FormUserDetails extends Component {
+  
   continue = e => {
+    
     e.preventDefault();
     this.props.nextStep();
   };
 
-  render() {
-    const { values, handleChange } = this.props;
+
+  
+  render(){
+    
+    const { age, values, handleChange } = this.props;
+
+    
+
     return (
       <MuiThemeProvider>
         <>
@@ -22,15 +32,20 @@ export class FormUserDetails extends Component {
             maxWidth='sm'
           >
             <AppBar title="Enter User Details" />
+          
+            
             <TextField
               placeholder="Enter Your First Name"
               label="First Name"
               onChange={handleChange('firstName')}
               defaultValue={values.firstName}
               margin="normal"
+
               fullWidth
-            />
-            <br />
+              
+            /> 
+        
+       <br />
             <TextField
               placeholder="Enter Your Last Name"
               label="Last Name"
@@ -50,10 +65,14 @@ export class FormUserDetails extends Component {
             />
             <br />
             <Button
-              color="primary"
+             style={{width: 120, background: 'linear-gradient(to right bottom, #430089, #82ffa1)'}} 
               variant="contained"
               onClick={this.continue}
             >Continue</Button>
+            <br/>
+
+
+
           </Dialog>
         </>
       </MuiThemeProvider>

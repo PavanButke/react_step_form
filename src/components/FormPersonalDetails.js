@@ -56,12 +56,14 @@ export class FormPersonalDetails extends Component {
             <br />
 
             <Button
+             style={{width: 120, background: 'linear-gradient(to right bottom, #430089, #82ffa1)'}} 
               color="secondary"
               variant="contained"
               onClick={this.back}
             >Back</Button>
 
             <Button
+             style={{width: 120, background: 'linear-gradient(to right bottom, #430089, #82ffa1)'}} 
               color="primary"
               variant="contained"
               onClick={this.continue}
